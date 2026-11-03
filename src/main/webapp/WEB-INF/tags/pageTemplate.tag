@@ -15,5 +15,9 @@
 <main class="container-fluid mt-5">
     <jsp:doBody/>
 </main>
+
+    <footer class="container text-center mt-5 py-3">
+        <p>&copy; 2026 Parking Lot. Toate drepturile rezervate.</p>
+    </footer>
 </body>
 </html>
