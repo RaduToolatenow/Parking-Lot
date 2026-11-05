@@ -17,7 +17,7 @@
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <ul class= "nav-bar">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item">
 <a class="nav-link" href="${pageContext.request.contextPath}">Login</a>
 
