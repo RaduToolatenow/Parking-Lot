@@ -24,6 +24,10 @@ tasks.withType(JavaCompile) {
 dependencies {
     compileOnly('jakarta.platform:jakarta.jakartaee-api:11.0.0')
 
+    // Dependentele JSTL adaugate:
+    compileOnly('jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0')
+    runtimeOnly('org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1')
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
