@@ -19,5 +19,8 @@
     <footer class="container text-center mt-5 py-3">
         <p>&copy; 2026 Parking Lot. Toate drepturile rezervate.</p>
     </footer>
+
+    <script src="${pageContext.request.contextPath}/scripts/form-validation.js"></script>
+
 </body>
 </html>

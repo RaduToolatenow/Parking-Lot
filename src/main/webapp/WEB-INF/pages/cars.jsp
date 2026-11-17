@@ -4,23 +4,37 @@
 
 <t:pageTemplate pageTitle="Cars">
     <h1>Cars</h1>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>License Plate</th>
-            <th>Parking Spot</th>
-            <th>Owner</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach var="car" items="${cars}">
+    <form method="POST" action="${pageContext.request.contextPath}/Cars">
+        <a href="${pageContext.request.contextPath}/AddCar" class="btn btn-primary btn-lg">Add Car</a>
+        <button class="btn btn-danger btn-lg" type="submit">Delete Cars</button>
+
+        <table class="table table-striped mt-3">
+            <thead>
             <tr>
-                <td>${car.licensePlate}</td>
-                <td>${car.parkingSpot}</td>
-                <td>${car.ownerName}</td>
+                <th></th>
+                <th>License Plate</th>
+                <th>Parking Spot</th>
+                <th>Owner</th>
+                <th></th>
             </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            <c:forEach var="car" items="${cars}">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="car_ids" value="${car.id}"/>
+                    </td>
+                    <td>${car.licensePlate}</td>
+                    <td>${car.parkingSpot}</td>
+                    <td>${car.ownerName}</td>
+                    <td>
+                        <a class="btn btn-secondary"
+                           href="${pageContext.request.contextPath}/EditCar?id=${car.id}">Edit Car</a>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </form>
     <h5 class="mt-4">Free parking spots: ${numberOfFreeParkingSpots}</h5>
 </t:pageTemplate>
