@@ -8,6 +8,7 @@
 
         <class>entities.User</class>
         <class>entities.Car</class>
+        <class>entities.UserGroup</class>
 
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="create-or-extend-tables" />
