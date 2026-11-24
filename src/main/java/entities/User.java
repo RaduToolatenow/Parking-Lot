@@ -1,6 +1,5 @@
 package entities;
 
-import Servlets.Cars;
 import jakarta.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
